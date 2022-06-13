@@ -9,7 +9,6 @@ body {
 }
 html {
 	scroll-behavior: smooth;
-	scroll-margin: 60px;
 }
 .nav {
 	display: block;
@@ -121,6 +120,7 @@ header {
 				text-align: center;
 				text-transform: uppercase;
 				color: #fff;
+				font-size: 42px;
 				span {
 					color: deepskyblue;
 				}
@@ -128,6 +128,7 @@ header {
 			p {
 				text-align: center;
 				color: #fff;
+				font-size: 21px;
 			}
 		}
 		.hero-shadow {
@@ -186,6 +187,8 @@ main {
 			.card {
 				position: relative;
 				height: 500px;
+				background: none;
+				border: none;
 				.img {
 					position: absolute;
 					background-repeat: no-repeat;
@@ -245,7 +248,7 @@ main {
 		.opinionsBox {
 			padding-top: 50px;
 			.slick-track {
-				height:400px;
+				height: 400px;
 				padding-top: 30px;
 			}
 			.opinion {
@@ -273,7 +276,8 @@ main {
 					.quote {
 						i {
 							position: absolute;
-							top: 105px;left: 35px;
+							top: 105px;
+							left: 35px;
 						}
 						p {
 							position: absolute;
@@ -289,6 +293,18 @@ main {
 						}
 					}
 				}
+			}
+		}
+	}
+	.contact {
+		background-color: #fff;
+		height: 100vh;
+		.title {
+			h1 {
+				padding-top: 15px;
+				text-transform: uppercase;
+				text-align: center;
+				color: #333;
 			}
 		}
 	}

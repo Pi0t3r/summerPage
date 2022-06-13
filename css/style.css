@@ -12,7 +12,6 @@ body {
 
 html {
   scroll-behavior: smooth;
-  scroll-margin: 60px;
 }
 
 .nav {
@@ -147,6 +146,7 @@ header .hero-img .hero-text h1 {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
+  font-size: 42px;
 }
 
 header .hero-img .hero-text h1 span {
@@ -156,6 +156,7 @@ header .hero-img .hero-text h1 span {
 header .hero-img .hero-text p {
   text-align: center;
   color: #fff;
+  font-size: 21px;
 }
 
 header .hero-img .hero-shadow {
@@ -219,6 +220,8 @@ main .offers .cards {
 main .offers .cards .card {
   position: relative;
   height: 500px;
+  background: none;
+  border: none;
 }
 
 main .offers .cards .card .img {
@@ -341,5 +344,17 @@ main .opinions .opinionsBox .opinion .info .quote strong {
   left: 160px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+main .contact {
+  background-color: #fff;
+  height: 100vh;
+}
+
+main .contact .title h1 {
+  padding-top: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333;
 }
 /*# sourceMappingURL=style.css.map */
