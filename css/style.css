@@ -203,7 +203,6 @@ main .aboutus .aboutusText .images img:hover {
 
 main .offers {
   background-color: rgba(255, 255, 255, 0.901);
-  height: 200vh;
 }
 
 main .offers .title h1 {
@@ -220,7 +219,7 @@ main .offers .cards {
 
 main .offers .cards .card {
   position: relative;
-  height: 500px;
+  height: 525px;
   background: none;
   border: none;
 }
@@ -255,12 +254,10 @@ main .offers .cards .card .img button {
   width: 80%;
   height: 40px;
   text-transform: uppercase;
-  background: none;
-  border: none;
+  background-color: deepskyblue;
   color: #333;
   cursor: pointer;
   border-radius: 8px;
-  background-color: #fff;
   -webkit-transition: background-color 0.5s, color 0.5s;
   transition: background-color 0.5s, color 0.5s;
 }
@@ -445,10 +442,10 @@ footer .socialMedia p i {
   border-radius: 50%;
   line-height: 40px;
   color: #fff;
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 footer .socialMedia p i:hover {

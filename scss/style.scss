@@ -173,7 +173,7 @@ main {
 	}
 	.offers {
 		background-color: rgba(255, 255, 255, 0.901);
-		height: 200vh;
+		// height: 200vh;
 		.title {
 			h1 {
 				color: rgb(0, 0, 0);
@@ -187,7 +187,7 @@ main {
 			margin: 0 auto;
 			.card {
 				position: relative;
-				height: 500px;
+				height: 525px;
 				background: none;
 				border: none;
 				.img {
@@ -214,12 +214,10 @@ main {
 						width: 80%;
 						height: 40px;
 						text-transform: uppercase;
-						background: none;
-						border: none;
+						background-color: deepskyblue;
 						color: #333;
 						cursor: pointer;
 						border-radius: 8px;
-						background-color: #fff;
 						transition: background-color 0.5s, color 0.5s;
 					}
 					button:hover {
@@ -381,7 +379,7 @@ footer {
 				border-radius: 50%;
 				line-height: 40px;
 				color: #fff;
-				transition: transform .5s;
+				transition: transform 0.5s;
 			}
 			i:hover {
 				transform: rotateX(360deg);
@@ -404,9 +402,23 @@ footer {
 			}
 		}
 	}
-	.lastWord{
+	.lastWord {
 		text-transform: uppercase;
 		text-align: center;
 		margin-bottom: 5px;
 	}
 }
+// @media (min-width: 167px) {
+// 	main {
+// 		.offers {
+// 			height: 145vh;
+// 		}
+// 	}
+// }
+// @media (min-width: 320px) {
+// 	main {
+// 		.offers {
+// 			height: 140vh;
+// 		}
+// 	}
+// }
