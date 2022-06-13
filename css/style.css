@@ -12,6 +12,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-margin: 60px;
 }
 
 .nav {
@@ -23,8 +24,8 @@ html {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   z-index: 100;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .nav ul {
@@ -272,5 +273,73 @@ main .offers .cards .card .one {
 main .offers .cards .card .two {
   background-image: url("../img/eiffel-gc63ac98ce_640.jpg");
   margin-top: 15px;
+}
+
+main .opinions .title {
+  padding-top: 10px;
+}
+
+main .opinions .title h1 {
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+
+main .opinions .opinionsBox {
+  padding-top: 50px;
+}
+
+main .opinions .opinionsBox .slick-track {
+  height: 400px;
+  padding-top: 30px;
+}
+
+main .opinions .opinionsBox .opinion {
+  position: relative;
+  border-radius: 8px;
+  height: 315px;
+  width: 200px;
+  margin: 0 30px;
+  background-color: #fff;
+  -webkit-box-shadow: 8px 8px 21px 1px black;
+          box-shadow: 8px 8px 21px 1px black;
+}
+
+main .opinions .opinionsBox .opinion .img {
+  position: absolute;
+  left: 50px;
+  top: 11px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+main .opinions .opinionsBox .opinion .img img {
+  display: block;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .opinions .opinionsBox .opinion .info .quote i {
+  position: absolute;
+  top: 105px;
+  left: 35px;
+}
+
+main .opinions .opinionsBox .opinion .info .quote p {
+  position: absolute;
+  right: 10px;
+  width: 83%;
+  bottom: 58px;
+}
+
+main .opinions .opinionsBox .opinion .info .quote strong {
+  position: absolute;
+  top: 11px;
+  left: 160px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 /*# sourceMappingURL=style.css.map */

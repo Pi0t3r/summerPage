@@ -9,6 +9,7 @@ body {
 }
 html {
 	scroll-behavior: smooth;
+	scroll-margin: 60px;
 }
 .nav {
 	display: block;
@@ -18,7 +19,7 @@ html {
 	height: 100%;
 	transform: translateX(100%);
 	z-index: 100;
-	transition: .5s;
+	transition: 0.5s;
 
 	ul {
 		position: absolute;
@@ -91,7 +92,6 @@ nav {
 				line-height: 60px;
 				padding-right: 15px;
 				cursor: pointer;
-				
 			}
 		}
 	}
@@ -184,7 +184,6 @@ main {
 			width: 100vw;
 			margin: 0 auto;
 			.card {
-				// background-color: lime;
 				position: relative;
 				height: 500px;
 				.img {
@@ -230,6 +229,65 @@ main {
 				.two {
 					background-image: url('../img/eiffel-gc63ac98ce_640.jpg');
 					margin-top: 15px;
+				}
+			}
+		}
+	}
+	.opinions {
+		.title {
+			padding-top: 10px;
+			h1 {
+				text-transform: uppercase;
+				text-align: center;
+				color: #fff;
+			}
+		}
+		.opinionsBox {
+			padding-top: 50px;
+			.slick-track {
+				height:400px;
+				padding-top: 30px;
+			}
+			.opinion {
+				position: relative;
+				border-radius: 8px;
+				height: 315px;
+				width: 200px;
+				margin: 0 30px;
+				background-color: #fff;
+				box-shadow: 8px 8px 21px 1px black;
+				.img {
+					position: absolute;
+					left: 50px;
+					top: 11px;
+					transform: translate(-50%, -50%);
+					img {
+						display: block;
+						border-radius: 50%;
+						height: 80px;
+						width: 80px;
+						object-fit: cover;
+					}
+				}
+				.info {
+					.quote {
+						i {
+							position: absolute;
+							top: 105px;left: 35px;
+						}
+						p {
+							position: absolute;
+							right: 10px;
+							width: 83%;
+							bottom: 58px;
+						}
+						strong {
+							position: absolute;
+							top: 11px;
+							left: 160px;
+							transform: translateX(-50%);
+						}
+					}
 				}
 			}
 		}
