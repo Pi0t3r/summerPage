@@ -193,6 +193,8 @@ main {
 				.img {
 					position: absolute;
 					background-repeat: no-repeat;
+					background-position: center;
+					background-size: cover;
 					height: 500px;
 					left: 50%;
 					transform: translateX(-50%);
@@ -540,7 +542,7 @@ footer {
 			.cards{
 				.card{
 					.img{
-						width: 25%;
+						width: 45%;
 					}
 				}
 			}
@@ -551,7 +553,8 @@ footer {
 					.info{
 						.quote{
 							p{
-								font-size: 30px;
+								font-size: 25px;
+								padding-bottom: 0;
 							}
 							strong{
 								font-size: 25px;

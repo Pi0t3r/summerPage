@@ -227,6 +227,8 @@ main .offers .cards .card {
 main .offers .cards .card .img {
   position: absolute;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 500px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -576,10 +578,11 @@ footer .lastWord {
 
 @media (min-width: 1024px) {
   main .offers .cards .card .img {
-    width: 25%;
+    width: 45%;
   }
   main .opinions .opinionsBox .opinion .info .quote p {
-    font-size: 30px;
+    font-size: 25px;
+    padding-bottom: 0;
   }
   main .opinions .opinionsBox .opinion .info .quote strong {
     font-size: 25px;
