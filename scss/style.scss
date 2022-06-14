@@ -311,10 +311,6 @@ footer {
 			width: 50%;
 			margin: -7px auto 0;
 		}
-		img {
-			width: 100%;
-			padding: 10px;
-		}
 		.title {
 			text-transform: uppercase;
 			text-align: center;
@@ -487,9 +483,6 @@ footer {
 			font-size: 45px;
 		}
 		.company {
-			img {
-				padding: 50px;
-			}
 			.title {
 				font-size: 35px;
 			}
@@ -524,6 +517,49 @@ footer {
 		}
 		.lastWord{
 			font-size: 30px;
+		}
+	}
+}
+
+@media(min-width:854px){
+	main{
+		.offers{
+			.cards{
+				.card{
+					.img{
+						width: 40%;
+					}
+				}
+			}
+		}
+	}
+}
+@media(min-width:1024px){
+	main{
+		.offers{
+			.cards{
+				.card{
+					.img{
+						width: 25%;
+					}
+				}
+			}
+		}
+		.opinions{
+			.opinionsBox{
+				.opinion{
+					.info{
+						.quote{
+							p{
+								font-size: 30px;
+							}
+							strong{
+								font-size: 25px;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
