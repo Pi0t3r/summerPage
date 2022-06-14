@@ -408,17 +408,122 @@ footer {
 		margin-bottom: 5px;
 	}
 }
-// @media (min-width: 167px) {
-// 	main {
-// 		.offers {
-// 			height: 145vh;
-// 		}
-// 	}
-// }
-// @media (min-width: 320px) {
-// 	main {
-// 		.offers {
-// 			height: 140vh;
-// 		}
-// 	}
-// }
+@media (min-width: 768px) {
+	nav {
+		.logo {
+			font-size: 40px;
+		}
+		.nav-items {
+			.bars {
+				button {
+					i {
+						font-size: 40px;
+						line-height: 60px;
+					}
+				}
+			}
+		}
+	}
+	header {
+		.hero-img {
+			.hero-text {
+				h1 {
+					font-size: 65px;
+				}
+				p {
+					font-size: 25px;
+				}
+			}
+		}
+	}
+	main {
+		.aboutus {
+			.aboutusText {
+				p {
+					font-size: 25px;
+					padding: 55px;
+				}
+				.images {
+					width: 100vw;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-evenly;
+					img {
+						width: 40%;
+					}
+				}
+			}
+		}
+		.offers {
+			.cards {
+				margin-top: 30px;
+				.card {
+					.img {
+						width: 50%;
+					}
+				}
+			}
+		}
+		.opinions {
+			.opinionsBox {
+				.opinion {
+					.info {
+						.quote {
+							p {
+								font-size: 17px;
+							}
+							strong {
+								left: 175px;
+								font-size: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	footer {
+		h1 {
+			font-size: 45px;
+		}
+		.company {
+			img {
+				padding: 50px;
+			}
+			.title {
+				font-size: 35px;
+			}
+			.info {
+				display: flex;
+				flex-direction: row;
+				text-align: center;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				font-size: 30px;
+			}
+		}
+		.clients {
+			.info {
+				display: flex;
+				flex-direction: row;
+				text-align: center;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				font-size: 20px;
+			}
+		}
+		.socialMedia {
+			.info {
+				display: flex;
+				flex-direction: row;
+				text-align: center;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				font-size: 20px;
+			}
+		}
+		.lastWord{
+			font-size: 30px;
+		}
+	}
+}

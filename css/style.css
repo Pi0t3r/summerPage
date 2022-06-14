@@ -471,4 +471,108 @@ footer .lastWord {
   text-align: center;
   margin-bottom: 5px;
 }
+
+@media (min-width: 768px) {
+  nav .logo {
+    font-size: 40px;
+  }
+  nav .nav-items .bars button i {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  header .hero-img .hero-text h1 {
+    font-size: 65px;
+  }
+  header .hero-img .hero-text p {
+    font-size: 25px;
+  }
+  main .aboutus .aboutusText p {
+    font-size: 25px;
+    padding: 55px;
+  }
+  main .aboutus .aboutusText .images {
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  main .aboutus .aboutusText .images img {
+    width: 40%;
+  }
+  main .offers .cards {
+    margin-top: 30px;
+  }
+  main .offers .cards .card .img {
+    width: 50%;
+  }
+  main .opinions .opinionsBox .opinion .info .quote p {
+    font-size: 17px;
+  }
+  main .opinions .opinionsBox .opinion .info .quote strong {
+    left: 175px;
+    font-size: 20px;
+  }
+  footer h1 {
+    font-size: 45px;
+  }
+  footer .company img {
+    padding: 50px;
+  }
+  footer .company .title {
+    font-size: 35px;
+  }
+  footer .company .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 30px;
+  }
+  footer .clients .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 20px;
+  }
+  footer .socialMedia .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 20px;
+  }
+  footer .lastWord {
+    font-size: 30px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
