@@ -6,8 +6,9 @@
 }
 
 body {
-  background-color: #333;
+  background-color: #FFEDDA;
   font-family: 'Gentium Plus', serif;
+  color: #000;
 }
 
 html {
@@ -17,7 +18,7 @@ html {
 .nav {
   display: block;
   position: fixed;
-  background-color: deepskyblue;
+  background-color: #3db2ff;
   width: 100%;
   height: 100%;
   -webkit-transform: translateX(100%);
@@ -96,7 +97,7 @@ nav .logo {
 }
 
 nav .logo span {
-  color: deepskyblue;
+  color: #3db2ff;
 }
 
 nav .logo i {
@@ -116,6 +117,47 @@ nav .nav-items .bars button {
   line-height: 60px;
   padding-right: 15px;
   cursor: pointer;
+}
+
+nav .nav-items .nav-item {
+  display: none;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  line-height: 60px;
+  height: 100%;
+  width: 40%;
+}
+
+nav .nav-items .nav-item ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .nav-items .nav-item ul li {
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+nav .nav-items .nav-item ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+
+nav .nav-items .nav-item ul li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 header {
@@ -151,7 +193,7 @@ header .hero-img .hero-text h1 {
 }
 
 header .hero-img .hero-text h1 span {
-  color: deepskyblue;
+  color: #3db2ff;
 }
 
 header .hero-img .hero-text p {
@@ -169,7 +211,6 @@ header .hero-img .hero-shadow {
 }
 
 main .aboutus .title {
-  color: #fff;
   text-align: center;
   text-transform: uppercase;
   padding-top: 20px;
@@ -178,7 +219,6 @@ main .aboutus .title {
 main .aboutus .aboutusText p {
   display: block;
   padding: 20px;
-  color: #fff;
 }
 
 main .aboutus .aboutusText .images {
@@ -201,12 +241,7 @@ main .aboutus .aboutusText .images img:hover {
           transform: scale(1.1);
 }
 
-main .offers {
-  background-color: rgba(255, 255, 255, 0.901);
-}
-
 main .offers .title h1 {
-  color: black;
   text-align: center;
   text-transform: uppercase;
   padding-top: 10px;
@@ -256,7 +291,7 @@ main .offers .cards .card .img button {
   width: 80%;
   height: 40px;
   text-transform: uppercase;
-  background-color: deepskyblue;
+  background-color: #3db2ff;
   color: #333;
   cursor: pointer;
   border-radius: 8px;
@@ -265,8 +300,7 @@ main .offers .cards .card .img button {
 }
 
 main .offers .cards .card .img button:hover {
-  background-color: red;
-  color: white;
+  background-color: #FFB830;
 }
 
 main .offers .cards .card .one {
@@ -285,7 +319,6 @@ main .opinions .title {
 main .opinions .title h1 {
   text-transform: uppercase;
   text-align: center;
-  color: #fff;
 }
 
 main .opinions .opinionsBox {
@@ -357,7 +390,7 @@ footer .company .mainTitle h1 {
 }
 
 footer .company hr {
-  border: 1px solid deepskyblue;
+  border: 1px solid #3db2ff;
   width: 50%;
   margin: -7px auto 0;
 }
@@ -369,7 +402,7 @@ footer .company .title {
 }
 
 footer .company .title span {
-  color: deepskyblue;
+  color: #3db2ff;
 }
 
 footer .company .info {
@@ -383,7 +416,7 @@ footer .clients .mainTitle h1 {
 }
 
 footer .clients hr {
-  border: 1px solid deepskyblue;
+  border: 1px solid #3db2ff;
   width: 50%;
   margin: -7px auto 0;
 }
@@ -395,7 +428,7 @@ footer .clients .title {
 }
 
 footer .clients .title span {
-  color: deepskyblue;
+  color: #3db2ff;
 }
 
 footer .clients .info {
@@ -413,7 +446,7 @@ footer .socialMedia .mainTitle h1 {
 }
 
 footer .socialMedia hr {
-  border: 1px solid deepskyblue;
+  border: 1px solid #3db2ff;
   width: 50%;
   margin: -7px auto 0;
 }
@@ -573,6 +606,19 @@ footer .lastWord {
 @media (min-width: 854px) {
   main .offers .cards .card .img {
     width: 40%;
+  }
+}
+
+@media (min-width: 992px) {
+  nav .logo {
+    position: absolute;
+    left: 25%;
+  }
+  nav .nav-items .bars {
+    display: none;
+  }
+  nav .nav-items .nav-item {
+    display: block;
   }
 }
 
