@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #FFEDDA;
+  background-color: #ffedda;
   font-family: 'Gentium Plus', serif;
   color: #000;
 }
@@ -46,7 +46,7 @@ html {
 
 .nav ul li a {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 
 .nav ul li .effect::after {
@@ -143,16 +143,41 @@ nav .nav-items .nav-item ul {
 }
 
 nav .nav-items .nav-item ul li {
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 nav .nav-items .nav-item ul li a {
   text-decoration: none;
   color: #000;
   font-size: 20px;
+}
+
+nav .nav-items .nav-item ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 1px;
+  bottom: 11px;
+  left: 0;
+  background-color: #3db2ff;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+nav .nav-items .nav-item ul li a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 nav .nav-items .nav-item ul li:hover {
@@ -292,7 +317,7 @@ main .offers .cards .card .img button {
   height: 40px;
   text-transform: uppercase;
   background-color: #3db2ff;
-  color: #333;
+  color: #000;
   cursor: pointer;
   border-radius: 8px;
   -webkit-transition: background-color 0.5s, color 0.5s;
@@ -300,7 +325,7 @@ main .offers .cards .card .img button {
 }
 
 main .offers .cards .card .img button:hover {
-  background-color: #FFB830;
+  background-color: #ffb830;
 }
 
 main .offers .cards .card .one {
@@ -380,6 +405,13 @@ main .opinions .opinionsBox .opinion .info .quote strong {
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #333;
   color: #fff;
 }
@@ -496,10 +528,12 @@ footer .socialMedia p .instagram-bg {
   background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
 }
 
-footer .lastWord {
+.lastWord {
+  background-color: #333;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 5px;
+  height: 30px;
+  color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -527,12 +561,13 @@ footer .lastWord {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   main .aboutus .aboutusText .images img {
     width: 40%;
+    margin: 10px;
   }
   main .offers .cards {
     margin-top: 30px;
@@ -609,6 +644,67 @@ footer .lastWord {
   }
 }
 
+@media (min-width: 930px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-color: #333;
+    color: #fff;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .company {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 30%;
+  }
+  footer .clients {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .socialMedia {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .lastWord {
+    font-size: 20px;
+  }
+}
+
 @media (min-width: 992px) {
   nav .logo {
     position: absolute;
@@ -623,8 +719,20 @@ footer .lastWord {
 }
 
 @media (min-width: 1024px) {
+  main .offers .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main .offers .cards .card {
+    width: 100%;
+  }
   main .offers .cards .card .img {
-    width: 45%;
+    width: 60%;
   }
   main .opinions .opinionsBox .opinion .info .quote p {
     font-size: 25px;

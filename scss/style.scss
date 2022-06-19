@@ -1,12 +1,13 @@
+@import './colors';
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 }
 body {
-	background-color: #FFEDDA;
+	background-color: #ffedda;
 	font-family: 'Gentium Plus', serif;
-	color: #000;
+	color: $textColor;
 }
 html {
 	scroll-behavior: smooth;
@@ -14,7 +15,7 @@ html {
 .nav {
 	display: block;
 	position: fixed;
-	background-color: #3db2ff;
+	background-color: $mainColor;
 	width: 100%;
 	height: 100%;
 	transform: translateX(100%);
@@ -34,7 +35,7 @@ html {
 			list-style: none;
 			a {
 				text-decoration: none;
-				color: white;
+				color: $mainTextColor;
 			}
 			.effect::after {
 				content: '';
@@ -42,7 +43,7 @@ html {
 				height: 33px;
 				width: 3px;
 				margin-left: -15px;
-				background-color: #fff;
+				background-color: $mainTextColor;
 				position: absolute;
 				transform: scaleY(0);
 				transition: transform 0.3s;
@@ -61,7 +62,7 @@ html {
 nav {
 	// display: block;
 	position: fixed;
-	background-color: #fff;
+	background-color: $mainTextColor;
 	height: 60px;
 	width: 100%;
 	z-index: 1000;
@@ -75,7 +76,7 @@ nav {
 		left: 50%;
 		transform: translateX(-50%);
 		span {
-			color: #3db2ff;
+			color: $mainColor;
 		}
 		i {
 			margin-right: 15px;
@@ -95,7 +96,7 @@ nav {
 				cursor: pointer;
 			}
 		}
-		.nav-item{
+		.nav-item {
 			display: none;
 			text-transform: uppercase;
 			position: absolute;
@@ -103,20 +104,36 @@ nav {
 			line-height: 60px;
 			height: 100%;
 			width: 40%;
-			ul{
+			ul {
 				list-style: none;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-around;
-				li{
-					transition: transform .5s;
-					a{
+				li {
+					transition: transform 0.5s;
+					a {
 						text-decoration: none;
-						color: #000;
+						color: $textColor;
 						font-size: 20px;
 					}
+					a::after {
+						content: '';
+						position: absolute;
+						width: 100%;
+						transform: scaleX(0);
+						height: 1px;
+						bottom: 11px;
+						left: 0;
+						background-color: $mainColor;
+						transform-origin: bottom right;
+						transition: transform 0.25s ease-out;
+					}
+					a:hover::after {
+						transform: scaleX(1);
+						transform-origin: bottom left;
+					}
 				}
-				li:hover{
+				li:hover {
 					transform: scale(1.2);
 				}
 			}
@@ -147,15 +164,15 @@ header {
 			h1 {
 				text-align: center;
 				text-transform: uppercase;
-				color: #fff;
+				color: $mainTextColor;
 				font-size: 42px;
 				span {
-					color: #3db2ff;
+					color: $mainColor;
 				}
 			}
 			p {
 				text-align: center;
-				color: #fff;
+				color: $mainTextColor;
 				font-size: 21px;
 			}
 		}
@@ -171,9 +188,7 @@ header {
 // MAIN
 main {
 	.aboutus {
-		
 		.title {
-			
 			text-align: center;
 			text-transform: uppercase;
 			padding-top: 20px;
@@ -182,7 +197,6 @@ main {
 			p {
 				display: block;
 				padding: 20px;
-				
 			}
 			.images {
 				display: block;
@@ -199,7 +213,7 @@ main {
 			}
 		}
 	}
-	.offers {		
+	.offers {
 		.title {
 			h1 {
 				text-align: center;
@@ -241,14 +255,14 @@ main {
 						width: 80%;
 						height: 40px;
 						text-transform: uppercase;
-						background-color: #3db2ff;
-						color: #333;
+						background-color: $mainColor;
+						color: $textColor;
 						cursor: pointer;
 						border-radius: 8px;
 						transition: background-color 0.5s, color 0.5s;
 					}
 					button:hover {
-						background-color: #FFB830;
+						background-color: #ffb830;
 					}
 				}
 				.one {
@@ -281,7 +295,7 @@ main {
 				height: 315px;
 				width: 200px;
 				margin: 0 30px;
-				background-color: #fff;
+				background-color: $mainTextColor;
 				box-shadow: 8px 8px 21px 1px black;
 				.img {
 					position: absolute;
@@ -322,8 +336,10 @@ main {
 	}
 }
 footer {
-	background-color: #333;
-	color: #fff;
+	display: flex;
+	flex-direction: column;
+	background-color: $darkBackground;
+	color: $mainTextColor;
 	.company {
 		.mainTitle {
 			h1 {
@@ -332,7 +348,7 @@ footer {
 			}
 		}
 		hr {
-			border: 1px solid #3db2ff;
+			border: 1px solid $mainColor;
 			width: 50%;
 			margin: -7px auto 0;
 		}
@@ -341,7 +357,7 @@ footer {
 			text-align: center;
 			font-size: 20px;
 			span {
-				color: #3db2ff;
+				color: $mainColor;
 			}
 		}
 		.info {
@@ -357,7 +373,7 @@ footer {
 			}
 		}
 		hr {
-			border: 1px solid #3db2ff;
+			border: 1px solid $mainColor;
 			width: 50%;
 			margin: -7px auto 0;
 		}
@@ -366,7 +382,7 @@ footer {
 			text-align: center;
 			font-size: 20px;
 			span {
-				color: #3db2ff;
+				color: $mainColor;
 			}
 		}
 		.info {
@@ -383,7 +399,7 @@ footer {
 			}
 		}
 		hr {
-			border: 1px solid #3db2ff;
+			border: 1px solid $mainColor;
 			width: 50%;
 			margin: -7px auto 0;
 		}
@@ -399,7 +415,7 @@ footer {
 				text-align: center;
 				border-radius: 50%;
 				line-height: 40px;
-				color: #fff;
+				color: $mainTextColor;
 				transition: transform 0.5s;
 			}
 			i:hover {
@@ -423,11 +439,13 @@ footer {
 			}
 		}
 	}
-	.lastWord {
-		text-transform: uppercase;
-		text-align: center;
-		margin-bottom: 5px;
-	}
+}
+.lastWord {
+	background-color: $darkBackground;
+	text-transform: uppercase;
+	text-align: center;
+	height: 30px;
+	color: $mainTextColor;
 }
 @media (min-width: 768px) {
 	nav {
@@ -468,9 +486,10 @@ footer {
 					width: 100vw;
 					display: flex;
 					flex-wrap: wrap;
-					justify-content: space-evenly;
+					justify-content: center;
 					img {
 						width: 40%;
+						margin: 10px;
 					}
 				}
 			}
@@ -540,18 +559,18 @@ footer {
 				font-size: 20px;
 			}
 		}
-		.lastWord{
+		.lastWord {
 			font-size: 30px;
 		}
 	}
 }
 
-@media(min-width:854px){
-	main{
-		.offers{
-			.cards{
-				.card{
-					.img{
+@media (min-width: 854px) {
+	main {
+		.offers {
+			.cards {
+				.card {
+					.img {
 						width: 40%;
 					}
 				}
@@ -559,43 +578,80 @@ footer {
 		}
 	}
 }
-@media(min-width:992px){
-nav{
-	.logo{
-		position: absolute;
-		left: 25%;
-	}
-	.nav-items{
-		.bars{
-			display: none;
+
+@media (min-width: 930px) {
+	footer {
+		display: flex;
+		flex-direction: row;
+		background-color: $darkBackground;
+		color: $mainTextColor;
+		flex-wrap: wrap;
+		.company {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-content: flex-end;
+			justify-content: center;
+			align-items: center;
+			width: 30%;
 		}
-		.nav-item{
-			display: block;
+		.clients {
+			width: 30%;
+			display: flex;
+			flex-direction: column;
+		}
+		.socialMedia {
+			width: 30%;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+	}
+	.lastWord{
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 992px) {
+	nav {
+		.logo {
+			position: absolute;
+			left: 25%;
+		}
+		.nav-items {
+			.bars {
+				display: none;
+			}
+			.nav-item {
+				display: block;
+			}
 		}
 	}
 }
-}
-@media(min-width:1024px){
-	main{
-		.offers{
-			.cards{
-				.card{
-					.img{
-						width: 45%;
+@media (min-width: 1024px) {
+	main {
+		.offers {
+			.cards {
+				display: flex;
+				flex-direction: row;
+				.card {
+					width: 100%;
+					.img {
+						width: 60%;
 					}
 				}
 			}
 		}
-		.opinions{
-			.opinionsBox{
-				.opinion{
-					.info{
-						.quote{
-							p{
+		.opinions {
+			.opinionsBox {
+				.opinion {
+					.info {
+						.quote {
+							p {
 								font-size: 25px;
 								padding-bottom: 0;
 							}
-							strong{
+							strong {
 								font-size: 25px;
 							}
 						}
