@@ -1,0 +1,29 @@
+@mixin center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin centerBigText {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+@mixin footer {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+@mixin column {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+@mixin left{
+	left: 50%;
+	transform: translateX(-50%);
+}

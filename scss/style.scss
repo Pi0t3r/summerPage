@@ -1,4 +1,6 @@
 @import './colors';
+@import './mixin';
+
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -23,10 +25,7 @@ html {
 	transition: 0.5s;
 
 	ul {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
+		@include center;
 		padding: 0;
 		li {
 			padding: 20px 0;
@@ -60,7 +59,6 @@ html {
 }
 // NAV
 nav {
-	// display: block;
 	position: fixed;
 	background-color: $mainTextColor;
 	height: 60px;
@@ -73,8 +71,7 @@ nav {
 		font-size: 20px;
 		text-transform: uppercase;
 		font-weight: bold;
-		left: 50%;
-		transform: translateX(-50%);
+		@include left;
 		span {
 			color: $mainColor;
 		}
@@ -83,10 +80,13 @@ nav {
 		}
 	}
 	.nav-items {
-		.bars {
-			display: block;
+		.bars,
+		.nav-item {
 			position: absolute;
 			right: 0;
+		}
+		.bars {
+			display: block;
 			button {
 				border: none;
 				background: none;
@@ -99,8 +99,6 @@ nav {
 		.nav-item {
 			display: none;
 			text-transform: uppercase;
-			position: absolute;
-			right: 0;
 			line-height: 60px;
 			height: 100%;
 			width: 40%;
@@ -156,14 +154,10 @@ header {
 		width: 100%;
 		z-index: 0;
 		.hero-text {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			@include center;
 			z-index: 2;
 			h1 {
-				text-align: center;
-				text-transform: uppercase;
+				@include centerBigText;
 				color: $mainTextColor;
 				font-size: 42px;
 				span {
@@ -189,18 +183,16 @@ header {
 main {
 	.aboutus {
 		.title {
-			text-align: center;
-			text-transform: uppercase;
+			@include centerBigText;
 			padding-top: 20px;
 		}
 		.aboutusText {
-			p {
+			p,
+			.images {
 				display: block;
 				padding: 20px;
 			}
 			.images {
-				display: block;
-				padding: 20px;
 				img {
 					width: 100%;
 					transition: transform 0.5s;
@@ -216,8 +208,7 @@ main {
 	.offers {
 		.title {
 			h1 {
-				text-align: center;
-				text-transform: uppercase;
+				@include centerBigText;
 				padding-top: 10px;
 			}
 		}
@@ -235,23 +226,21 @@ main {
 					background-position: center;
 					background-size: cover;
 					height: 500px;
-					left: 50%;
-					transform: translateX(-50%);
+					@include left;
 					width: 90vw;
 					border-radius: 40px;
-					h3 {
+					h3,
+					button {
 						position: absolute;
+						@include left;
+					}
+					h3 {
 						top: 20px;
-						left: 50%;
-						transform: translateX(-50%);
 						text-transform: uppercase;
 						font-size: 30px;
 					}
 					button {
-						position: absolute;
 						bottom: 20px;
-						left: 50%;
-						transform: translateX(-50%);
 						width: 80%;
 						height: 40px;
 						text-transform: uppercase;
@@ -279,8 +268,7 @@ main {
 		.title {
 			padding-top: 10px;
 			h1 {
-				text-transform: uppercase;
-				text-align: center;
+				@include centerBigText;
 			}
 		}
 		.opinionsBox {
@@ -312,19 +300,21 @@ main {
 				}
 				.info {
 					.quote {
-						i {
+						i,
+						p,
+						strong {
 							position: absolute;
+						}
+						i {
 							top: 105px;
 							left: 35px;
 						}
 						p {
-							position: absolute;
 							right: 10px;
 							width: 83%;
 							bottom: 58px;
 						}
 						strong {
-							position: absolute;
 							top: 11px;
 							left: 160px;
 							transform: translateX(-50%);
@@ -343,8 +333,7 @@ footer {
 	.company {
 		.mainTitle {
 			h1 {
-				text-transform: uppercase;
-				text-align: center;
+				@include centerBigText;
 			}
 		}
 		hr {
@@ -353,8 +342,7 @@ footer {
 			margin: -7px auto 0;
 		}
 		.title {
-			text-transform: uppercase;
-			text-align: center;
+			@include centerBigText;
 			font-size: 20px;
 			span {
 				color: $mainColor;
@@ -368,8 +356,7 @@ footer {
 	.clients {
 		.mainTitle {
 			h1 {
-				text-transform: uppercase;
-				text-align: center;
+				@include centerBigText;
 			}
 		}
 		hr {
@@ -378,8 +365,7 @@ footer {
 			margin: -7px auto 0;
 		}
 		.title {
-			text-transform: uppercase;
-			text-align: center;
+			@include centerBigText;
 			font-size: 20px;
 			span {
 				color: $mainColor;
@@ -394,8 +380,7 @@ footer {
 		padding-top: 20px;
 		.mainTitle {
 			h1 {
-				text-transform: uppercase;
-				text-align: center;
+				@include centerBigText;
 			}
 		}
 		hr {
@@ -404,10 +389,8 @@ footer {
 			margin: -7px auto 0;
 		}
 		p {
-			display: flex;
-			flex-direction: column;
+			@include column;
 			text-align: center;
-			flex-wrap: wrap;
 			i {
 				margin-top: 10px;
 				height: 40px;
@@ -442,8 +425,7 @@ footer {
 }
 .lastWord {
 	background-color: $darkBackground;
-	text-transform: uppercase;
-	text-align: center;
+	@include centerBigText;
 	height: 30px;
 	color: $mainTextColor;
 }
@@ -526,36 +508,25 @@ footer {
 		h1 {
 			font-size: 45px;
 		}
+
 		.company {
 			.title {
 				font-size: 35px;
 			}
 			.info {
-				display: flex;
-				flex-direction: row;
-				text-align: center;
-				flex-wrap: wrap;
-				justify-content: space-around;
-				font-size: 30px;
+				@include footer;
+				font-size: 23px;
 			}
 		}
 		.clients {
 			.info {
-				display: flex;
-				flex-direction: row;
-				text-align: center;
-				flex-wrap: wrap;
-				justify-content: space-around;
+				@include footer;
 				font-size: 20px;
 			}
 		}
 		.socialMedia {
 			.info {
-				display: flex;
-				flex-direction: row;
-				text-align: center;
-				flex-wrap: wrap;
-				justify-content: space-around;
+				@include footer;
 				font-size: 20px;
 			}
 		}
@@ -583,31 +554,17 @@ footer {
 	footer {
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 		background-color: $darkBackground;
 		color: $mainTextColor;
-		flex-wrap: wrap;
-		.company {
-			display: flex;
-			flex-direction: column;
-			flex-wrap: wrap;
-			align-content: flex-end;
-			justify-content: center;
-			align-items: center;
-			width: 30%;
-		}
-		.clients {
-			width: 30%;
-			display: flex;
-			flex-direction: column;
-		}
+		.company,
+		.clients,
 		.socialMedia {
+			@include column;
 			width: 30%;
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: column;
 		}
 	}
-	.lastWord{
+	.lastWord {
 		font-size: 20px;
 	}
 }
