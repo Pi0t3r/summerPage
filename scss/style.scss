@@ -1,5 +1,6 @@
 @import './colors';
 @import './mixin';
+@import './parameters';
 
 * {
 	box-sizing: border-box;
@@ -18,9 +19,9 @@ html {
 	display: block;
 	position: fixed;
 	background-color: $mainColor;
-	width: 100%;
-	height: 100%;
-	transform: translateX(100%);
+	width: $full;
+	height: $full;
+	transform: translateX($full);
 	z-index: 100;
 	transition: 0.5s;
 
@@ -28,9 +29,9 @@ html {
 		@include center;
 		padding: 0;
 		li {
-			padding: 20px 0;
+			padding: $fontSize 0;
 			text-transform: uppercase;
-			font-size: 20px;
+			font-size: $fontSize;
 			list-style: none;
 			a {
 				text-decoration: none;
@@ -62,13 +63,13 @@ nav {
 	position: fixed;
 	background-color: $mainTextColor;
 	height: 60px;
-	width: 100%;
+	width: $full;
 	z-index: 1000;
 	.logo {
 		display: block;
 		position: absolute;
 		line-height: 60px;
-		font-size: 20px;
+		font-size: $fontSize;
 		text-transform: uppercase;
 		font-weight: bold;
 		@include left;
@@ -90,7 +91,7 @@ nav {
 			button {
 				border: none;
 				background: none;
-				font-size: 20px;
+				font-size: $fontSize;
 				line-height: 60px;
 				padding-right: 15px;
 				cursor: pointer;
@@ -100,7 +101,7 @@ nav {
 			display: none;
 			text-transform: uppercase;
 			line-height: 60px;
-			height: 100%;
+			height: $full;
 			width: 40%;
 			ul {
 				list-style: none;
@@ -112,12 +113,12 @@ nav {
 					a {
 						text-decoration: none;
 						color: $textColor;
-						font-size: 20px;
+						font-size: $fontSize;
 					}
 					a::after {
 						content: '';
 						position: absolute;
-						width: 100%;
+						width: $full;
 						transform: scaleX(0);
 						height: 1px;
 						bottom: 11px;
@@ -143,15 +144,15 @@ nav {
 
 header {
 	position: relative;
-	width: 100%;
+	width: $full;
 	height: 100vh;
 	.hero-img {
 		background-image: url('../img/beach-g21087271d_640.jpg');
 		background-size: cover;
 		background-position: right;
 		background-attachment: fixed;
-		height: 100%;
-		width: 100%;
+		height: $full;
+		width: $full;
 		z-index: 0;
 		.hero-text {
 			@include center;
@@ -173,8 +174,8 @@ header {
 		.hero-shadow {
 			position: absolute;
 			background-color: rgba(0, 0, 0, 0.6);
-			width: 100%;
-			height: 100%;
+			width: $full;
+			height: $full;
 			z-index: 0;
 		}
 	}
@@ -184,20 +185,20 @@ main {
 	.aboutus {
 		.title {
 			@include centerBigText;
-			padding-top: 20px;
+			padding-top: $fontSize;
 		}
 		.aboutusText {
 			p,
 			.images {
 				display: block;
-				padding: 20px;
+				padding: $fontSize;
 			}
 			.images {
 				img {
-					width: 100%;
+					width: $full;
 					transition: transform 0.5s;
-					border-radius: 10px;
-					margin-bottom: 10px;
+					border-radius: $margin;
+					margin-bottom: $margin;
 				}
 				img:hover {
 					transform: scale(1.1);
@@ -209,7 +210,7 @@ main {
 		.title {
 			h1 {
 				@include centerBigText;
-				padding-top: 10px;
+				padding-top: $margin;
 			}
 		}
 		.cards {
@@ -235,12 +236,12 @@ main {
 						@include left;
 					}
 					h3 {
-						top: 20px;
+						top: $fontSize;
 						text-transform: uppercase;
 						font-size: 30px;
 					}
 					button {
-						bottom: 20px;
+						bottom: $fontSize;
 						width: 80%;
 						height: 40px;
 						text-transform: uppercase;
@@ -266,7 +267,7 @@ main {
 	}
 	.opinions {
 		.title {
-			padding-top: 10px;
+			padding-top: $margin;
 			h1 {
 				@include centerBigText;
 			}
@@ -310,7 +311,7 @@ main {
 							left: 35px;
 						}
 						p {
-							right: 10px;
+							right: $margin;
 							width: 83%;
 							bottom: 58px;
 						}
@@ -343,13 +344,13 @@ footer {
 		}
 		.title {
 			@include centerBigText;
-			font-size: 20px;
+			font-size: $fontSize;
 			span {
 				color: $mainColor;
 			}
 		}
 		.info {
-			padding-top: 10px;
+			padding-top: $margin;
 			text-align: center;
 		}
 	}
@@ -366,18 +367,18 @@ footer {
 		}
 		.title {
 			@include centerBigText;
-			font-size: 20px;
+			font-size: $fontSize;
 			span {
 				color: $mainColor;
 			}
 		}
 		.info {
-			padding-top: 10px;
+			padding-top: $margin;
 			text-align: center;
 		}
 	}
 	.socialMedia {
-		padding-top: 20px;
+		padding-top: $fontSize;
 		.mainTitle {
 			h1 {
 				@include centerBigText;
@@ -392,7 +393,7 @@ footer {
 			@include column;
 			text-align: center;
 			i {
-				margin-top: 10px;
+				margin-top: $margin;
 				height: 40px;
 				width: 40px;
 				text-align: center;
@@ -415,10 +416,10 @@ footer {
 					radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
 					radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
 					radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
-					radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+					radial-gradient(ellipse farthest-corner at $full 0, #893dc2, transparent 50%),
 					radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
-					radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
-					linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+					radial-gradient(ellipse farthest-corner at $full $full, #d9317a, transparent),
+					linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d $full);
 			}
 		}
 	}
@@ -471,7 +472,7 @@ footer {
 					justify-content: center;
 					img {
 						width: 40%;
-						margin: 10px;
+						margin: $margin;
 					}
 				}
 			}
@@ -496,7 +497,7 @@ footer {
 							}
 							strong {
 								left: 238px;
-								font-size: 20px;
+								font-size: $fontSize;
 							}
 						}
 					}
@@ -521,13 +522,13 @@ footer {
 		.clients {
 			.info {
 				@include footer;
-				font-size: 20px;
+				font-size: $fontSize;
 			}
 		}
 		.socialMedia {
 			.info {
 				@include footer;
-				font-size: 20px;
+				font-size: $fontSize;
 			}
 		}
 		.lastWord {
@@ -565,7 +566,7 @@ footer {
 		}
 	}
 	.lastWord {
-		font-size: 20px;
+		font-size: $fontSize;
 	}
 }
 
@@ -592,7 +593,7 @@ footer {
 				display: flex;
 				flex-direction: row;
 				.card {
-					width: 100%;
+					width: $full;
 					.img {
 						width: 60%;
 					}
