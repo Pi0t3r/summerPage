@@ -15,23 +15,39 @@ body {
 html {
 	scroll-behavior: smooth;
 }
+.uppercase {
+	text-transform: uppercase;
+}
+.width {
+	width: $full;
+}
+.absolute {
+	position: absolute;
+}
+.bodyAndTextColor {
+	background-color: $darkBackground;
+	color: $mainTextColor;
+}
+.include {
+	@include centerBigText;
+}
+.size {
+	font-size: $fontSize;
+}
 .nav {
 	display: block;
 	position: fixed;
 	background-color: $mainColor;
-	width: $full;
 	height: $full;
 	transform: translateX($full);
 	z-index: 100;
-	transition:.5s;
+	transition: 0.5s;
 
 	ul {
 		@include center;
 		padding: 0;
 		li {
 			padding: $fontSize 0;
-			text-transform: uppercase;
-			font-size: $fontSize;
 			list-style: none;
 			a {
 				text-decoration: none;
@@ -46,7 +62,7 @@ html {
 				background-color: $mainTextColor;
 				position: absolute;
 				transform: scaleY(0);
-				transition: transform .3s;
+				transition: transform 0.3s;
 			}
 			.effect:hover::after {
 				transform: scaleY(1);
@@ -63,14 +79,10 @@ nav {
 	position: fixed;
 	background-color: $mainTextColor;
 	height: 60px;
-	width: $full;
 	z-index: 1000;
 	.logo {
 		display: block;
-		position: absolute;
 		line-height: 60px;
-		font-size: $fontSize;
-		text-transform: uppercase;
 		font-weight: bold;
 		@include left;
 		span {
@@ -83,7 +95,6 @@ nav {
 	.nav-items {
 		.bars,
 		.nav-item {
-			position: absolute;
 			right: 0;
 		}
 		.bars {
@@ -91,7 +102,6 @@ nav {
 			button {
 				border: none;
 				background: none;
-				font-size: $fontSize;
 				line-height: 60px;
 				padding-right: 15px;
 				cursor: pointer;
@@ -99,7 +109,6 @@ nav {
 		}
 		.nav-item {
 			display: none;
-			text-transform: uppercase;
 			line-height: 60px;
 			height: $full;
 			width: 40%;
@@ -109,11 +118,10 @@ nav {
 				flex-direction: row;
 				justify-content: space-around;
 				li {
-					transition: transform .5s;
+					transition: transform 0.5s;
 					a {
 						text-decoration: none;
 						color: $textColor;
-						font-size: $fontSize;
 					}
 					a::after {
 						content: '';
@@ -125,7 +133,7 @@ nav {
 						left: 0;
 						background-color: $mainColor;
 						transform-origin: bottom right;
-						transition: transform .25s ease-out;
+						transition: transform 0.25s ease-out;
 					}
 					a:hover::after {
 						transform: scaleX(1);
@@ -144,7 +152,6 @@ nav {
 
 header {
 	position: relative;
-	width: $full;
 	height: 100vh;
 	.hero-img {
 		background-image: url('../img/beach-g21087271d_640.jpg');
@@ -152,13 +159,11 @@ header {
 		background-position: right;
 		background-attachment: fixed;
 		height: $full;
-		width: $full;
 		z-index: 0;
 		.hero-text {
 			@include center;
 			z-index: 2;
 			h1 {
-				@include centerBigText;
 				color: $mainTextColor;
 				font-size: 42px;
 				span {
@@ -172,9 +177,7 @@ header {
 			}
 		}
 		.hero-shadow {
-			position: absolute;
 			background-color: rgba(0, 0, 0, 0.6);
-			width: $full;
 			height: $full;
 			z-index: 0;
 		}
@@ -184,7 +187,6 @@ header {
 main {
 	.aboutus {
 		.title {
-			@include centerBigText;
 			padding-top: $fontSize;
 		}
 		.aboutusText {
@@ -195,8 +197,7 @@ main {
 			}
 			.images {
 				img {
-					width: $full;
-					transition: transform .5s;
+					transition: transform 0.5s;
 					border-radius: $margin;
 					margin-bottom: $margin;
 				}
@@ -209,7 +210,6 @@ main {
 	.offers {
 		.title {
 			h1 {
-				@include centerBigText;
 				padding-top: $margin;
 			}
 		}
@@ -222,7 +222,6 @@ main {
 				background: none;
 				border: none;
 				.img {
-					position: absolute;
 					background-repeat: no-repeat;
 					background-position: center;
 					background-size: cover;
@@ -232,9 +231,7 @@ main {
 					border-radius: 40px;
 					h3,
 					button {
-						position: absolute;
 						@include left;
-						text-transform: uppercase;
 					}
 					h3 {
 						top: $fontSize;
@@ -248,7 +245,7 @@ main {
 						color: $textColor;
 						cursor: pointer;
 						border-radius: 8px;
-						transition: background-color .5s, color .5s;
+						transition: background-color 0.5s, color 0.5s;
 					}
 					button:hover {
 						background-color: #ffb830;
@@ -267,9 +264,6 @@ main {
 	.opinions {
 		.title {
 			padding-top: $margin;
-			h1 {
-				@include centerBigText;
-			}
 		}
 		.opinionsBox {
 			padding-top: 50px;
@@ -286,7 +280,6 @@ main {
 				background-color: $mainTextColor;
 				box-shadow: 8px 8px 21px 1px black;
 				.img {
-					position: absolute;
 					left: 50px;
 					top: 11px;
 					transform: translate(-50%, -50%);
@@ -300,11 +293,6 @@ main {
 				}
 				.info {
 					.quote {
-						i,
-						p,
-						strong {
-							position: absolute;
-						}
 						i {
 							top: 105px;
 							left: 35px;
@@ -327,22 +315,13 @@ main {
 }
 footer {
 	@include column;
-	background-color: $darkBackground;
-	color: $mainTextColor;
 	.company {
-		.mainTitle {
-			h1 {
-				@include centerBigText;
-			}
-		}
 		hr {
 			border: 1px solid $mainColor;
 			width: $half;
 			margin: -7px auto 0;
 		}
 		.title {
-			@include centerBigText;
-			font-size: $fontSize;
 			span {
 				color: $mainColor;
 			}
@@ -353,22 +332,10 @@ footer {
 		}
 	}
 	.clients {
-		.mainTitle {
-			h1 {
-				@include centerBigText;
-			}
-		}
 		hr {
 			border: 1px solid $mainColor;
 			width: $half;
 			margin: -7px auto 0;
-		}
-		.title {
-			@include centerBigText;
-			font-size: $fontSize;
-			span {
-				color: $mainColor;
-			}
 		}
 		.info {
 			padding-top: $margin;
@@ -377,11 +344,6 @@ footer {
 	}
 	.socialMedia {
 		padding-top: $fontSize;
-		.mainTitle {
-			h1 {
-				@include centerBigText;
-			}
-		}
 		hr {
 			border: 1px solid $mainColor;
 			width: $half;
@@ -398,7 +360,7 @@ footer {
 				border-radius: $half;
 				line-height: 40px;
 				color: $mainTextColor;
-				transition: transform .5s;
+				transition: transform 0.5s;
 			}
 			i:hover {
 				transform: rotateX(360deg);
@@ -423,10 +385,7 @@ footer {
 	}
 }
 .lastWord {
-	background-color: $darkBackground;
-	@include centerBigText;
 	height: 30px;
-	color: $mainTextColor;
 }
 @media (min-width: 768px) {
 	nav {
@@ -485,22 +444,19 @@ footer {
 		}
 		.opinions {
 			.opinionsBox {
-				.opinion {
-					.info {
-						.quote {
-							p {
-								font-size: 17px;
-							}
-							strong {
-								left: 238px;
-								font-size: $fontSize;
-							}
-						}
+				.quote {
+					p {
+						font-size: 17px;
+					}
+					strong {
+						left: 238px;
+						font-size: $fontSize;
 					}
 				}
 			}
 		}
 	}
+
 	footer {
 		h1 {
 			font-size: 45px;
@@ -548,8 +504,6 @@ footer {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		background-color: $darkBackground;
-		color: $mainTextColor;
 		.company,
 		.clients,
 		.socialMedia {

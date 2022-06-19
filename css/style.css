@@ -15,17 +15,42 @@ html {
   scroll-behavior: smooth;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.width {
+  width: 100%;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.bodyAndTextColor {
+  background-color: #333;
+  color: #fff;
+}
+
+.include {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.size {
+  font-size: 20px;
+}
+
 .nav {
   display: block;
   position: fixed;
   background-color: #3db2ff;
-  width: 100%;
   height: 100%;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   z-index: 100;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .nav ul {
@@ -39,8 +64,6 @@ html {
 
 .nav ul li {
   padding: 20px 0;
-  text-transform: uppercase;
-  font-size: 20px;
   list-style: none;
 }
 
@@ -59,10 +82,10 @@ html {
   position: absolute;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .nav ul li .effect:hover::after {
@@ -80,16 +103,12 @@ nav {
   position: fixed;
   background-color: #fff;
   height: 60px;
-  width: 100%;
   z-index: 1000;
 }
 
 nav .logo {
   display: block;
-  position: absolute;
   line-height: 60px;
-  font-size: 20px;
-  text-transform: uppercase;
   font-weight: bold;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -106,7 +125,6 @@ nav .logo i {
 
 nav .nav-items .bars,
 nav .nav-items .nav-item {
-  position: absolute;
   right: 0;
 }
 
@@ -117,7 +135,6 @@ nav .nav-items .bars {
 nav .nav-items .bars button {
   border: none;
   background: none;
-  font-size: 20px;
   line-height: 60px;
   padding-right: 15px;
   cursor: pointer;
@@ -125,7 +142,6 @@ nav .nav-items .bars button {
 
 nav .nav-items .nav-item {
   display: none;
-  text-transform: uppercase;
   line-height: 60px;
   height: 100%;
   width: 40%;
@@ -145,16 +161,15 @@ nav .nav-items .nav-item ul {
 }
 
 nav .nav-items .nav-item ul li {
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 nav .nav-items .nav-item ul li a {
   text-decoration: none;
   color: #000;
-  font-size: 20px;
 }
 
 nav .nav-items .nav-item ul li a::after {
@@ -169,10 +184,10 @@ nav .nav-items .nav-item ul li a::after {
   background-color: #3db2ff;
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
-  -webkit-transition: -webkit-transform .25s ease-out;
-  transition: -webkit-transform .25s ease-out;
-  transition: transform .25s ease-out;
-  transition: transform .25s ease-out, -webkit-transform .25s ease-out;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
 
 nav .nav-items .nav-item ul li a:hover::after {
@@ -189,7 +204,6 @@ nav .nav-items .nav-item ul li:hover {
 
 header {
   position: relative;
-  width: 100%;
   height: 100vh;
 }
 
@@ -199,7 +213,6 @@ header .hero-img {
   background-position: right;
   background-attachment: fixed;
   height: 100%;
-  width: 100%;
   z-index: 0;
 }
 
@@ -213,8 +226,6 @@ header .hero-img .hero-text {
 }
 
 header .hero-img .hero-text h1 {
-  text-align: center;
-  text-transform: uppercase;
   color: #fff;
   font-size: 42px;
 }
@@ -230,16 +241,12 @@ header .hero-img .hero-text p {
 }
 
 header .hero-img .hero-shadow {
-  position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
-  width: 100%;
   height: 100%;
   z-index: 0;
 }
 
 main .aboutus .title {
-  text-align: center;
-  text-transform: uppercase;
   padding-top: 20px;
 }
 
@@ -250,11 +257,10 @@ main .aboutus .aboutusText .images {
 }
 
 main .aboutus .aboutusText .images img {
-  width: 100%;
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -265,8 +271,6 @@ main .aboutus .aboutusText .images img:hover {
 }
 
 main .offers .title h1 {
-  text-align: center;
-  text-transform: uppercase;
   padding-top: 10px;
 }
 
@@ -283,7 +287,6 @@ main .offers .cards .card {
 }
 
 main .offers .cards .card .img {
-  position: absolute;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -297,11 +300,9 @@ main .offers .cards .card .img {
 
 main .offers .cards .card .img h3,
 main .offers .cards .card .img button {
-  position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  text-transform: uppercase;
 }
 
 main .offers .cards .card .img h3 {
@@ -317,8 +318,8 @@ main .offers .cards .card .img button {
   color: #000;
   cursor: pointer;
   border-radius: 8px;
-  -webkit-transition: background-color .5s, color .5s;
-  transition: background-color .5s, color .5s;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 main .offers .cards .card .img button:hover {
@@ -336,11 +337,6 @@ main .offers .cards .card .two {
 
 main .opinions .title {
   padding-top: 10px;
-}
-
-main .opinions .title h1 {
-  text-align: center;
-  text-transform: uppercase;
 }
 
 main .opinions .opinionsBox {
@@ -364,7 +360,6 @@ main .opinions .opinionsBox .opinion {
 }
 
 main .opinions .opinionsBox .opinion .img {
-  position: absolute;
   left: 50px;
   top: 11px;
   -webkit-transform: translate(-50%, -50%);
@@ -378,12 +373,6 @@ main .opinions .opinionsBox .opinion .img img {
   width: 80px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-main .opinions .opinionsBox .opinion .info .quote i,
-main .opinions .opinionsBox .opinion .info .quote p,
-main .opinions .opinionsBox .opinion .info .quote strong {
-  position: absolute;
 }
 
 main .opinions .opinionsBox .opinion .info .quote i {
@@ -414,25 +403,12 @@ footer {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-color: #333;
-  color: #fff;
-}
-
-footer .company .mainTitle h1 {
-  text-align: center;
-  text-transform: uppercase;
 }
 
 footer .company hr {
   border: 1px solid #3db2ff;
   width: 50%;
   margin: -7px auto 0;
-}
-
-footer .company .title {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 20px;
 }
 
 footer .company .title span {
@@ -444,25 +420,10 @@ footer .company .info {
   text-align: center;
 }
 
-footer .clients .mainTitle h1 {
-  text-align: center;
-  text-transform: uppercase;
-}
-
 footer .clients hr {
   border: 1px solid #3db2ff;
   width: 50%;
   margin: -7px auto 0;
-}
-
-footer .clients .title {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 20px;
-}
-
-footer .clients .title span {
-  color: #3db2ff;
 }
 
 footer .clients .info {
@@ -472,11 +433,6 @@ footer .clients .info {
 
 footer .socialMedia {
   padding-top: 20px;
-}
-
-footer .socialMedia .mainTitle h1 {
-  text-align: center;
-  text-transform: uppercase;
 }
 
 footer .socialMedia hr {
@@ -506,10 +462,10 @@ footer .socialMedia p i {
   border-radius: 50%;
   line-height: 40px;
   color: #fff;
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 footer .socialMedia p i:hover {
@@ -531,11 +487,7 @@ footer .socialMedia p .instagram-bg {
 }
 
 .lastWord {
-  background-color: #333;
-  text-align: center;
-  text-transform: uppercase;
   height: 30px;
-  color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -577,10 +529,10 @@ footer .socialMedia p .instagram-bg {
   main .offers .cards .card .img {
     width: 50%;
   }
-  main .opinions .opinionsBox .opinion .info .quote p {
+  main .opinions .opinionsBox .quote p {
     font-size: 17px;
   }
-  main .opinions .opinionsBox .opinion .info .quote strong {
+  main .opinions .opinionsBox .quote strong {
     left: 238px;
     font-size: 20px;
   }
@@ -657,8 +609,6 @@ footer .socialMedia p .instagram-bg {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    background-color: #333;
-    color: #fff;
   }
   footer .company,
   footer .clients,
