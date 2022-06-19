@@ -24,8 +24,8 @@ html {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   z-index: 100;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .nav ul {
@@ -59,10 +59,10 @@ html {
   position: absolute;
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
 .nav ul li .effect:hover::after {
@@ -145,10 +145,10 @@ nav .nav-items .nav-item ul {
 }
 
 nav .nav-items .nav-item ul li {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
 
 nav .nav-items .nav-item ul li a {
@@ -169,10 +169,10 @@ nav .nav-items .nav-item ul li a::after {
   background-color: #3db2ff;
   -webkit-transform-origin: bottom right;
           transform-origin: bottom right;
-  -webkit-transition: -webkit-transform 0.25s ease-out;
-  transition: -webkit-transform 0.25s ease-out;
-  transition: transform 0.25s ease-out;
-  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+  -webkit-transition: -webkit-transform .25s ease-out;
+  transition: -webkit-transform .25s ease-out;
+  transition: transform .25s ease-out;
+  transition: transform .25s ease-out, -webkit-transform .25s ease-out;
 }
 
 nav .nav-items .nav-item ul li a:hover::after {
@@ -251,10 +251,10 @@ main .aboutus .aboutusText .images {
 
 main .aboutus .aboutusText .images img {
   width: 100%;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -301,11 +301,11 @@ main .offers .cards .card .img button {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  text-transform: uppercase;
 }
 
 main .offers .cards .card .img h3 {
   top: 20px;
-  text-transform: uppercase;
   font-size: 30px;
 }
 
@@ -313,13 +313,12 @@ main .offers .cards .card .img button {
   bottom: 20px;
   width: 80%;
   height: 40px;
-  text-transform: uppercase;
   background-color: #3db2ff;
   color: #000;
   cursor: pointer;
   border-radius: 8px;
-  -webkit-transition: background-color 0.5s, color 0.5s;
-  transition: background-color 0.5s, color 0.5s;
+  -webkit-transition: background-color .5s, color .5s;
+  transition: background-color .5s, color .5s;
 }
 
 main .offers .cards .card .img button:hover {
@@ -413,6 +412,8 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: #333;
   color: #fff;
 }
@@ -505,10 +506,10 @@ footer .socialMedia p i {
   border-radius: 50%;
   line-height: 40px;
   color: #fff;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
 
 footer .socialMedia p i:hover {
@@ -545,10 +546,10 @@ footer .socialMedia p .instagram-bg {
     font-size: 40px;
     line-height: 60px;
   }
-  header .hero-img .hero-text h1 {
+  header .hero-text h1 {
     font-size: 65px;
   }
-  header .hero-img .hero-text p {
+  header .hero-text p {
     font-size: 25px;
   }
   main .aboutus .aboutusText p {
@@ -640,7 +641,7 @@ footer .socialMedia p .instagram-bg {
 }
 
 @media (min-width: 854px) {
-  main .offers .cards .card .img {
+  main .offers .img {
     width: 40%;
   }
 }

@@ -23,7 +23,7 @@ html {
 	height: $full;
 	transform: translateX($full);
 	z-index: 100;
-	transition: 0.5s;
+	transition:.5s;
 
 	ul {
 		@include center;
@@ -46,7 +46,7 @@ html {
 				background-color: $mainTextColor;
 				position: absolute;
 				transform: scaleY(0);
-				transition: transform 0.3s;
+				transition: transform .3s;
 			}
 			.effect:hover::after {
 				transform: scaleY(1);
@@ -109,7 +109,7 @@ nav {
 				flex-direction: row;
 				justify-content: space-around;
 				li {
-					transition: transform 0.5s;
+					transition: transform .5s;
 					a {
 						text-decoration: none;
 						color: $textColor;
@@ -125,7 +125,7 @@ nav {
 						left: 0;
 						background-color: $mainColor;
 						transform-origin: bottom right;
-						transition: transform 0.25s ease-out;
+						transition: transform .25s ease-out;
 					}
 					a:hover::after {
 						transform: scaleX(1);
@@ -196,7 +196,7 @@ main {
 			.images {
 				img {
 					width: $full;
-					transition: transform 0.5s;
+					transition: transform .5s;
 					border-radius: $margin;
 					margin-bottom: $margin;
 				}
@@ -234,22 +234,21 @@ main {
 					button {
 						position: absolute;
 						@include left;
+						text-transform: uppercase;
 					}
 					h3 {
 						top: $fontSize;
-						text-transform: uppercase;
 						font-size: 30px;
 					}
 					button {
 						bottom: $fontSize;
 						width: 80%;
 						height: 40px;
-						text-transform: uppercase;
 						background-color: $mainColor;
 						color: $textColor;
 						cursor: pointer;
 						border-radius: 8px;
-						transition: background-color 0.5s, color 0.5s;
+						transition: background-color .5s, color .5s;
 					}
 					button:hover {
 						background-color: #ffb830;
@@ -293,7 +292,7 @@ main {
 					transform: translate(-50%, -50%);
 					img {
 						display: block;
-						border-radius: 50%;
+						border-radius: $half;
 						height: 80px;
 						width: 80px;
 						object-fit: cover;
@@ -327,8 +326,7 @@ main {
 	}
 }
 footer {
-	display: flex;
-	flex-direction: column;
+	@include column;
 	background-color: $darkBackground;
 	color: $mainTextColor;
 	.company {
@@ -339,7 +337,7 @@ footer {
 		}
 		hr {
 			border: 1px solid $mainColor;
-			width: 50%;
+			width: $half;
 			margin: -7px auto 0;
 		}
 		.title {
@@ -362,7 +360,7 @@ footer {
 		}
 		hr {
 			border: 1px solid $mainColor;
-			width: 50%;
+			width: $half;
 			margin: -7px auto 0;
 		}
 		.title {
@@ -386,7 +384,7 @@ footer {
 		}
 		hr {
 			border: 1px solid $mainColor;
-			width: 50%;
+			width: $half;
 			margin: -7px auto 0;
 		}
 		p {
@@ -397,10 +395,10 @@ footer {
 				height: 40px;
 				width: 40px;
 				text-align: center;
-				border-radius: 50%;
+				border-radius: $half;
 				line-height: 40px;
 				color: $mainTextColor;
-				transition: transform 0.5s;
+				transition: transform .5s;
 			}
 			i:hover {
 				transform: rotateX(360deg);
@@ -412,9 +410,9 @@ footer {
 				background: #0077b5;
 			}
 			.instagram-bg {
-				background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
-					radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
-					radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+				background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent $half),
+					radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent $half),
+					radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent $half),
 					radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
 					radial-gradient(ellipse farthest-corner at $full 0, #893dc2, transparent 50%),
 					radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
@@ -447,14 +445,12 @@ footer {
 		}
 	}
 	header {
-		.hero-img {
-			.hero-text {
-				h1 {
-					font-size: 65px;
-				}
-				p {
-					font-size: 25px;
-				}
+		.hero-text {
+			h1 {
+				font-size: 65px;
+			}
+			p {
+				font-size: 25px;
 			}
 		}
 	}
@@ -540,12 +536,8 @@ footer {
 @media (min-width: 854px) {
 	main {
 		.offers {
-			.cards {
-				.card {
-					.img {
-						width: 40%;
-					}
-				}
+			.img {
+				width: 40%;
 			}
 		}
 	}
