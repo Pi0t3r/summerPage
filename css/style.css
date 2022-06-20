@@ -61,6 +61,8 @@ html {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   padding: 0;
+  -webkit-animation: slide 3s forwards;
+          animation: slide 3s forwards;
 }
 
 .nav ul li {
@@ -92,6 +94,24 @@ html {
 .nav ul li .effect:hover::after {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
+}
+
+@-webkit-keyframes slide {
+  from {
+    left: 130%;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide {
+  from {
+    left: 130%;
+  }
+  to {
+    left: 50%;
+  }
 }
 
 .active {

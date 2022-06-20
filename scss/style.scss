@@ -47,9 +47,10 @@ html {
 	ul {
 		@include center;
 		padding: 0;
+		animation: slide 3s forwards;
 		li {
 			padding: $fontSize 0;
-			list-style: none;
+			list-style: none;			
 			a {
 				text-decoration: none;
 				color: $mainTextColor;
@@ -69,6 +70,15 @@ html {
 				transform: scaleY(1);
 			}
 		}
+		
+	}
+}
+@keyframes slide{
+	from{
+		left: 130%;
+	}
+	to{
+		left: 50%;
 	}
 }
 .active {
@@ -118,6 +128,7 @@ nav {
 				display: flex;
 				flex-direction: row;
 				justify-content: space-around;
+				
 				li {
 					transition: transform 0.5s;
 					a {
@@ -354,6 +365,7 @@ main {
 		bottom: 20px
 	}
 }
+
 footer {
 	@include column;
 	.company {
