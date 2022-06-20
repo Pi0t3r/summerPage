@@ -303,6 +303,7 @@ main .offers .cards .card .img {
           transform: translateX(-50%);
   width: 90vw;
   border-radius: 40px;
+  overflow: hidden;
 }
 
 main .offers .cards .card .img h3,
@@ -319,7 +320,8 @@ main .offers .cards .card .img h3 {
 
 main .offers .cards .card .img button {
   display: none;
-  bottom: 20px;
+  -webkit-animation: downUp 1s forwards;
+          animation: downUp 1s forwards;
   width: 80%;
   height: 40px;
   background-color: #3db2ff;
@@ -338,6 +340,8 @@ main .offers .cards .card .img p {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-size: 30px;
+  -webkit-animation: rightLeft 1s forwards;
+          animation: rightLeft 1s forwards;
 }
 
 main .offers .cards .card .img button:hover {
@@ -416,6 +420,46 @@ main .opinions .opinionsBox .opinion .info .quote strong {
   left: 170px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@-webkit-keyframes rightLeft {
+  from {
+    -webkit-transform: translateX(259px);
+            transform: translateX(259px);
+  }
+  to {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+
+@keyframes rightLeft {
+  from {
+    -webkit-transform: translateX(259px);
+            transform: translateX(259px);
+  }
+  to {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+
+@-webkit-keyframes downUp {
+  from {
+    bottom: -60px;
+  }
+  to {
+    bottom: 20px;
+  }
+}
+
+@keyframes downUp {
+  from {
+    bottom: -60px;
+  }
+  to {
+    bottom: 20px;
+  }
 }
 
 footer {
@@ -596,15 +640,12 @@ footer .socialMedia p .instagram-bg {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    text-align: center;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
     font-size: 20px;
   }
   footer .socialMedia .info {

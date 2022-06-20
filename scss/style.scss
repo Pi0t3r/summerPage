@@ -234,6 +234,7 @@ main {
 					@include left;
 					width: 90vw;
 					border-radius: 40px;
+					overflow: hidden;
 					h3,
 					button {
 						@include left;
@@ -244,7 +245,7 @@ main {
 					}
 					button {
 						display: none;
-						bottom: $fontSize;
+						animation: downUp 1s forwards;
 						width: 80%;
 						height: 40px;
 						background-color: $mainColor;
@@ -260,6 +261,7 @@ main {
 						top: 50%;
 						transform: translate(-50%, -50%);
 						font-size: 30px;
+						animation: rightLeft 1s forwards;
 					}
 					button:hover {
 						background-color: #ffb830;
@@ -331,7 +333,22 @@ main {
 		}
 	}
 }
-
+@keyframes rightLeft{
+	from{
+		transform: translateX(259px);
+	}
+	to{
+		transform: translateX(-100px)
+	}
+}
+@keyframes downUp{
+	from{
+		bottom: -60px;
+	}
+	to{
+		bottom: 20px
+	}
+}
 footer {
 	@include column;
 	.company {
@@ -510,7 +527,7 @@ footer {
 		}
 		.clients {
 			.info {
-				@include footer;
+				@include column;
 				font-size: $fontSize;
 			}
 		}
