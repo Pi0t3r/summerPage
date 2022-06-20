@@ -14,6 +14,7 @@ body {
 }
 html {
 	scroll-behavior: smooth;
+	scroll-padding-top: 60px;
 }
 .uppercase {
 	text-transform: uppercase;
@@ -208,6 +209,9 @@ main {
 		}
 	}
 	.offers {
+		background-image: url('../img/bora-bora-gd722440de_1920.jpg');
+		background-size: cover;
+		background-position: center;
 		.title {
 			h1 {
 				padding-top: $margin;
@@ -221,6 +225,7 @@ main {
 				height: 525px;
 				background: none;
 				border: none;
+
 				.img {
 					background-repeat: no-repeat;
 					background-position: center;
@@ -229,6 +234,7 @@ main {
 					@include left;
 					width: 90vw;
 					border-radius: 40px;
+					transition: background-image 1s;
 					h3,
 					button {
 						@include left;
@@ -238,17 +244,35 @@ main {
 						font-size: 30px;
 					}
 					button {
+						display: none;
 						bottom: $fontSize;
 						width: 80%;
 						height: 40px;
 						background-color: $mainColor;
 						color: $textColor;
-						cursor: pointer;
 						border-radius: 8px;
 						transition: background-color 0.5s, color 0.5s;
+						cursor: pointer;
+					}
+					p {
+						position: absolute;
+						display: none;
+						left: 50%;
+						top: 50%;
+						transform: translate(-50%, -50%);
+						text-transform: uppercase;
 					}
 					button:hover {
 						background-color: #ffb830;
+					}
+				}
+				.img:hover {
+					background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+					button {
+						display: block;
+					}
+					p{
+						display: block;
 					}
 				}
 				.one {
@@ -256,7 +280,6 @@ main {
 				}
 				.two {
 					background-image: url('../img/eiffel-gc63ac98ce_640.jpg');
-					margin-top: 15px;
 				}
 			}
 		}
