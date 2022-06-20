@@ -234,7 +234,6 @@ main {
 					@include left;
 					width: 90vw;
 					border-radius: 40px;
-					transition: background-image 1s;
 					h3,
 					button {
 						@include left;
@@ -297,7 +296,7 @@ main {
 			.opinion {
 				position: relative;
 				border-radius: 8px;
-				height: 315px;
+				height: 236px;
 				width: 200px;
 				margin: 0 30px;
 				background-color: $mainTextColor;
@@ -316,18 +315,14 @@ main {
 				}
 				.info {
 					.quote {
-						i {
-							top: 105px;
-							left: 35px;
-						}
 						p {
 							right: $margin;
 							width: 83%;
-							bottom: 58px;
+							bottom: 14px;
 						}
 						strong {
 							top: 11px;
-							left: 160px;
+							left: 170px;
 							transform: translateX(-50%);
 						}
 					}
@@ -336,6 +331,7 @@ main {
 		}
 	}
 }
+
 footer {
 	@include column;
 	.company {
@@ -410,6 +406,17 @@ footer {
 .lastWord {
 	height: 30px;
 }
+@media (min-width: 414px){
+	main{
+		.opinions{
+			.opinionsBox{
+				.opinion{
+					height: 196px;
+				}
+			}
+		}
+	}
+}
 @media (min-width: 768px) {
 	nav {
 		.logo {
@@ -450,7 +457,7 @@ footer {
 					justify-content: center;
 					img {
 						width: 40%;
-						margin: $margin;
+						margin: 15px;
 					}
 				}
 			}
@@ -467,7 +474,13 @@ footer {
 		}
 		.opinions {
 			.opinionsBox {
+				.slick-track{
+					.opinion{
+						height: 270px;
+					}
+				}
 				.quote {
+					
 					p {
 						font-size: 17px;
 					}
@@ -492,6 +505,7 @@ footer {
 			.info {
 				@include footer;
 				font-size: 23px;
+				padding: 70px;
 			}
 		}
 		.clients {
@@ -527,6 +541,7 @@ footer {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		justify-content: center;
 		.company,
 		.clients,
 		.socialMedia {
@@ -580,10 +595,18 @@ footer {
 							}
 							strong {
 								font-size: 25px;
+								left: 200px;
 							}
 						}
 					}
 				}
+			}
+		}
+	}
+	footer{
+		.company{
+			.info{
+				padding: 47px;
 			}
 		}
 	}

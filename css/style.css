@@ -13,6 +13,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 60px;
 }
 
 .uppercase {
@@ -270,6 +271,12 @@ main .aboutus .aboutusText .images img:hover {
           transform: scale(1.1);
 }
 
+main .offers {
+  background-image: url("../img/bora-bora-gd722440de_1920.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 main .offers .title h1 {
   padding-top: 10px;
 }
@@ -311,19 +318,43 @@ main .offers .cards .card .img h3 {
 }
 
 main .offers .cards .card .img button {
+  display: none;
   bottom: 20px;
   width: 80%;
   height: 40px;
   background-color: #3db2ff;
   color: #000;
-  cursor: pointer;
   border-radius: 8px;
   -webkit-transition: background-color 0.5s, color 0.5s;
   transition: background-color 0.5s, color 0.5s;
+  cursor: pointer;
+}
+
+main .offers .cards .card .img p {
+  position: absolute;
+  display: none;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-transform: uppercase;
 }
 
 main .offers .cards .card .img button:hover {
   background-color: #ffb830;
+}
+
+main .offers .cards .card .img:hover {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fbc2eb), to(#a6c1ee));
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+main .offers .cards .card .img:hover button {
+  display: block;
+}
+
+main .offers .cards .card .img:hover p {
+  display: block;
 }
 
 main .offers .cards .card .one {
@@ -332,7 +363,6 @@ main .offers .cards .card .one {
 
 main .offers .cards .card .two {
   background-image: url("../img/eiffel-gc63ac98ce_640.jpg");
-  margin-top: 15px;
 }
 
 main .opinions .title {
@@ -351,7 +381,7 @@ main .opinions .opinionsBox .slick-track {
 main .opinions .opinionsBox .opinion {
   position: relative;
   border-radius: 8px;
-  height: 315px;
+  height: 236px;
   width: 200px;
   margin: 0 30px;
   background-color: #fff;
@@ -375,20 +405,15 @@ main .opinions .opinionsBox .opinion .img img {
      object-fit: cover;
 }
 
-main .opinions .opinionsBox .opinion .info .quote i {
-  top: 105px;
-  left: 35px;
-}
-
 main .opinions .opinionsBox .opinion .info .quote p {
   right: 10px;
   width: 83%;
-  bottom: 58px;
+  bottom: 14px;
 }
 
 main .opinions .opinionsBox .opinion .info .quote strong {
   top: 11px;
-  left: 160px;
+  left: 170px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -490,6 +515,12 @@ footer .socialMedia p .instagram-bg {
   height: 30px;
 }
 
+@media (min-width: 414px) {
+  main .opinions .opinionsBox .opinion {
+    height: 196px;
+  }
+}
+
 @media (min-width: 768px) {
   nav .logo {
     font-size: 40px;
@@ -521,13 +552,16 @@ footer .socialMedia p .instagram-bg {
   }
   main .aboutus .aboutusText .images img {
     width: 40%;
-    margin: 10px;
+    margin: 15px;
   }
   main .offers .cards {
     margin-top: 30px;
   }
   main .offers .cards .card .img {
     width: 50%;
+  }
+  main .opinions .opinionsBox .slick-track .opinion {
+    height: 270px;
   }
   main .opinions .opinionsBox .quote p {
     font-size: 17px;
@@ -556,6 +590,7 @@ footer .socialMedia p .instagram-bg {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     font-size: 23px;
+    padding: 70px;
   }
   footer .clients .info {
     display: -webkit-box;
@@ -609,6 +644,9 @@ footer .socialMedia p .instagram-bg {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   footer .company,
   footer .clients,
@@ -664,6 +702,10 @@ footer .socialMedia p .instagram-bg {
   }
   main .opinions .opinionsBox .opinion .info .quote strong {
     font-size: 25px;
+    left: 200px;
+  }
+  footer .company .info {
+    padding: 47px;
   }
 }
 /*# sourceMappingURL=style.css.map */
