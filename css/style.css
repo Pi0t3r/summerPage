@@ -336,12 +336,18 @@ main .offers .cards .card .img p {
   position: absolute;
   display: none;
   left: 50%;
-  top: 50%;
+  top: 27%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-size: 30px;
   -webkit-animation: rightLeft 1s forwards;
           animation: rightLeft 1s forwards;
+}
+
+main .offers .cards .card .img p span {
+  color: #ffb830;
+  font-weight: bold;
+  font-size: 60px;
 }
 
 main .offers .cards .card .img button:hover {

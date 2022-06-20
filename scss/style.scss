@@ -258,10 +258,15 @@ main {
 						position: absolute;
 						display: none;
 						left: 50%;
-						top: 50%;
+						top: 27%;
 						transform: translate(-50%, -50%);
 						font-size: 30px;
 						animation: rightLeft 1s forwards;
+						span{
+							color: #ffb830;
+							font-weight: bold;
+							font-size: 60px;
+						}
 					}
 					button:hover {
 						background-color: #ffb830;
