@@ -498,6 +498,7 @@ footer {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-top: 20px;
 }
 
 footer .company hr {

@@ -368,6 +368,7 @@ main {
 
 footer {
 	@include column;
+	padding-top: 20px;
 	.company {
 		hr {
 			border: 1px solid $mainColor;
